@@ -9,25 +9,46 @@
 <%@include file="header.jsp"%>
 </head>
 <body>
-	<div class="container">
-		<div class="page-header">请登录系统</div>
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<div class="content">
-					<form>
-						<div class="form-group">
-							<label for="name">用户名</label>
-							<input type="text" class="form-control" id="name" placeholder="请输入用户名"/>
-						</div>
-						<div class="form-group">
-							<label for="password">密码</label>
-							<input type="password" class="form-control" id="password" placeholder="请输入密码"/>
-						</div>
-						<button type="button" class="btn btn-default" id="btnLogin">登录</button>
-					</form>					
+	<header id="header"> <span id="extr-page-header-space">
+		<span class="hidden-mobile hidden-xs">Need an account?</span>
+	</span> </header>
+
+	<div id="main" role="main">
+
+		<!-- MAIN CONTENT -->
+		<div id="content" class="container">
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+					<div class="well no-padding">
+						<form action="index.html" id="login-form"
+							class="smart-form client-form">
+							<header> 登录系统 </header>
+
+							<fieldset>
+
+								<section> <label class="label">账号</label> <label
+									class="input"> <i class="icon-append fa fa-user"></i> <input
+									type=text name="name" id="name"> <b
+									class="tooltip tooltip-top-right"><i
+										class="fa fa-user txt-color-teal"></i>请输入你的账号</b></label> </section>
+
+								<section> <label class="label">密码</label> <label
+									class="input"> <i class="icon-append fa fa-lock"></i> <input
+									type="password" name="password" id="password"> <b
+									class="tooltip tooltip-top-right"><i
+										class="fa fa-lock txt-color-teal"></i> 请输入你的密码</b>
+								</label> </section>
+							</fieldset>
+							<footer>
+							<button type="button" id="btnLogin" class="btn btn-primary">登录</button>
+							</footer>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
+
 	</div>
 </body>
 <%@include file="footer.jsp"%>

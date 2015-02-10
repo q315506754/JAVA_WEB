@@ -5,8 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.bjj.modal.ResponseModal;
 import com.bjj.modal.User;
 import com.bjj.service.UserService;
 
@@ -23,12 +24,21 @@ public class UserController {
 		return "login";
 	}
 	
+	@RequestMapping({"/index"})
+	public String goIndex(){
+		return "index";
+	}
+	
 	/**
 	 * 处理登录逻辑
 	 * */
 	@RequestMapping(value="/user/login",method=RequestMethod.POST)
-	public String userLogin(@RequestBody User user){
+	@ResponseBody
+	public ResponseModal userLogin(@RequestBody User user){
 		System.out.println("userName is "+user.getUserName()+" password is "+user.getPassWord());
-		return "index";
+		ResponseModal res = new ResponseModal();
+		res.setError(0);
+		res.setMessage("OK");
+		return res;
 	}
 }
