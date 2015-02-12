@@ -13,17 +13,14 @@
 			-->
 	<nav>
 		<ul>
-			<li class=""><a href="ajax/dashboard.html" title="Dashboard"><i
-					class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Dashboard</span></a>
-			</li>
-			<li><a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span
-					class="menu-item-parent">Tables</span></a>
+			<li><a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Tables</span></a>
 				<ul>
 					<li><a href="ajax/table.html">Normal Tables</a></li>
 					<li><a href="ajax/datatables.html">Data Tables <span
 							class="badge inbox-badge bg-color-greenLight">v1.10</span></a></li>
 					<li><a href="ajax/jqgrid.html">Jquery Grid</a></li>
-				</ul></li>
+				</ul>
+			</li>
 			<li><a href="#"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i>
 					<span class="menu-item-parent">Forms</span></a>
 				<ul>

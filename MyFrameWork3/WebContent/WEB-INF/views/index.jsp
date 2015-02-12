@@ -4,7 +4,7 @@
 <html lang="en-us">	
 	<head>
 		<meta charset="utf-8">
-		<title> SmartAdmin (AJAX)</title>
+		<title>欢迎使用</title>
 		<meta name="description" content="">
 		<meta name="author" content="">
 		
@@ -17,13 +17,13 @@
 		<header id="header">
 			<div id="logo-group">
 
-				<!-- PLACE YOUR LOGO HERE -->
-				<span id="logo"> <img src="./img/logo.png" alt="SmartAdmin"> </span>
+				<!-- PLACE YOUR LOGO HERE 
+				<span id="logo"> <img src="./img/logo.png" alt="SmartAdmin"> </span>-->
 				<!-- END LOGO PLACEHOLDER -->
 
 				<!-- Note: The activity badge color changes when clicked and resets the number to 0
 					 Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
-				<span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <b class="badge"> 21 </b> </span>
+				<span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <!-- <b class="badge"> 21 </b> --> </span>
 
 				<!-- AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file -->
 				<div class="ajax-dropdown">
@@ -32,7 +32,7 @@
 					<div class="btn-group btn-group-justified" data-toggle="buttons">
 						<label class="btn btn-default">
 							<input type="radio" name="activity" id="ajax/notify/mail.html">
-							Msgs (14) </label>
+							个人设置</label>
 						<label class="btn btn-default">
 							<input type="radio" name="activity" id="ajax/notify/notifications.html">
 							notify (3) </label>
