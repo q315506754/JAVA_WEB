@@ -2,6 +2,7 @@ package com.bjj.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -38,7 +39,33 @@ public class UserController {
 		System.out.println("userName is "+user.getUserName()+" password is "+user.getPassWord());
 		ResponseModal res = new ResponseModal();
 		res.setError(0);
-		res.setMessage(service.doLogin(user.getUserName(), user.getPassWord()));
+		user = service.doLogin(user.getUserName(), user.getPassWord());
+		System.out.println("==================="+(null!=user?user.getId():"null"));
+		res.setMessage(user);
+		return res;
+	}
+	
+	/**
+	 * 获取所有用户
+	 * */
+	@RequestMapping(value="/user/list",method=RequestMethod.GET)
+	@ResponseBody
+	public ResponseModal getUserList(){
+		ResponseModal res = new ResponseModal();
+		res.setError(0);
+		res.setMessage(service.getAllUsers());
+		return res;
+	}
+	
+	/**
+	 * 获取用户手机号
+	 * */
+	@RequestMapping(value="/user/{userName}/mobile",method=RequestMethod.GET)
+	@ResponseBody
+	public ResponseModal getUserMobile(@PathVariable String userName){
+		ResponseModal res = new ResponseModal();
+		res.setError(0);
+		res.setMessage(service.getUserMobile(userName));
 		return res;
 	}
 }

@@ -1,5 +1,7 @@
 package com.bjj.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +14,16 @@ public class UserService {
 	UserRepository repo;
 	
 	public User doLogin(String userName,String passWord){
+		System.out.println("params:"+userName+passWord);
 		User user = repo.findUserByNamdAndPwd(userName, passWord);
 		return user;
+	}
+	
+	public User getUserMobile(String userName){
+		return repo.findMobileByNamd(userName);
+	}
+	
+	public List<User> getAllUsers(){
+		return repo.findAll();
 	}
 }

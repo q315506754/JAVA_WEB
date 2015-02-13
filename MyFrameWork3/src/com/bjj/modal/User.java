@@ -21,6 +21,13 @@ public class User implements Serializable {
 	private String passWord;
 	private String mobile;
 	
+	/**
+	 * 无参构造，当请求为User对象时，SPRING需要
+	 * */
+	public User(){
+		super();
+	}
+	
 	@PersistenceConstructor
 	public User(String userName,String passWord,String mobile){
 		this.userName = userName;

@@ -30,16 +30,16 @@
 	</mongo:mongo>
 	
 	<!-- MONGO工厂，通过它来获取MONGO实例 -->
-	<mongo:db-factory id="mdbf" dbname="${mongo.dbname}" mongo-ref="mongo"/>
+	<mongo:db-factory dbname="${mongo.dbname}" mongo-ref="mongo"/>
 	
 	<!-- MONGO操作对象 -->
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-		<constructor-arg name="mongoDbFactory" ref="mdbf"></constructor-arg>
+		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory"></constructor-arg>
 	</bean>
 	
 	<!-- MONGO映射转换器，自动装配文件作为collection映射 -->
-	<mongo:mapping-converter base-package="com.bjj.modal"/>
+	<mongo:mapping-converter base-package="com.bjj.modal" id="mconverter"/>
 	
 	<!-- MONGO bean 仓库目录，自动装配扩展MongoRepository接口的接口 -->
-	<mongo:repositories base-package="com.bjj.service.db"></mongo:repositories>
+	<mongo:repositories base-package="com.bjj.service.db" mongo-template-ref="mongoTemplate"></mongo:repositories>
 </beans>

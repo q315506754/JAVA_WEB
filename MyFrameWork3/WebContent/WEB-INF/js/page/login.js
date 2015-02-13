@@ -13,7 +13,7 @@ $(function(){
 		}).done(function(data,textStatus){
 			console.log(data,textStatus);
 			if(data.error == 0){
-				window.location.href = "index";
+//				window.location.href = "index";
 			}
 		}).fail(function(){
 			alert("网络异常");
