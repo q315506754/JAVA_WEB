@@ -19,26 +19,24 @@
 		<div id="content" class="container">
 
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+				<div class="col-xs-12 col-sm-12  col-md-offset-2 col-md-4 col-lg-4">
 					<div class="well no-padding">
 						<form action="index.html" id="login-form"
 							class="smart-form client-form">
 							<header> 登录系统 </header>
 
 							<fieldset>
-
-								<section> <label class="label">账号</label> <label
-									class="input"> <i class="icon-append fa fa-user"></i> <input
-									type=text name="name" id="name"> <b
-									class="tooltip tooltip-top-right"><i
-										class="fa fa-user txt-color-teal"></i>请输入你的账号</b></label> </section>
+								<section> <label class="label">账号</label> <label class="input"><i class="icon-append fa fa-user"></i>
+									<input type=text name="name" id="name"> <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i>请输入你的账号</b></label>
+								</section>
 
 								<section> <label class="label">密码</label> <label
 									class="input"> <i class="icon-append fa fa-lock"></i> <input
 									type="password" name="password" id="password"> <b
 									class="tooltip tooltip-top-right"><i
 										class="fa fa-lock txt-color-teal"></i> 请输入你的密码</b>
-								</label> </section>
+								</label>
+								</section>
 							</fieldset>
 							<footer>
 							<button type="button" id="btnLogin" class="btn btn-primary">登录</button>

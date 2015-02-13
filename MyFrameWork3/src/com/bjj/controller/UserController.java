@@ -38,7 +38,7 @@ public class UserController {
 		System.out.println("userName is "+user.getUserName()+" password is "+user.getPassWord());
 		ResponseModal res = new ResponseModal();
 		res.setError(0);
-		res.setMessage("OK");
+		res.setMessage(service.doLogin(user.getUserName(), user.getPassWord()));
 		return res;
 	}
 }

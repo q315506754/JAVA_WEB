@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="     
+           http://www.springframework.org/schema/beans     
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd     
+           http://www.springframework.org/schema/context     
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/data/mongo
+           http://www.springframework.org/schema/data/mongo/spring-mongo-1.5.xsd">
+	<!-- MONGO配置信息 -->
+	<context:property-placeholder location="classpath:/com/bjj/resources/props/mongo.properties"/>
+	<!-- 定义MONGO对象,replica-set设置集群副本的ip地址和端口 -->
+	<mongo:mongo id="mongo" replica-set="${mongo.replica_set}">
+		<!-- MONGO属性 -->
+		<!-- 			threads-allowed-to-block-for-connection-multiplier="${mongo.tatbfcm}"
+			connect-timeout="${mongo.timeout}"
+			max-wait-time="${mongo.maxWaitTime}"
+			auto-connect-retry="${mongo.acr}"
+			socket-keep-alive="${mongo.socketKeepAlive}"
+			socket-timeout="${mongo.sTimeout}"
+			slave-ok="${mongo.slaveOk}" 
+			write-number="1"
+			write-timeout="0"
+			write-fsync="true"-->
+		<mongo:options
+			connections-per-host="${mongo.perHost}"/>
+	</mongo:mongo>
+	
+	<!-- MONGO工厂，通过它来获取MONGO实例 -->
+	<mongo:db-factory id="mdbf" dbname="${mongo.dbname}" mongo-ref="mongo"/>
+	
+	<!-- MONGO操作对象 -->
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg name="mongoDbFactory" ref="mdbf"></constructor-arg>
+	</bean>
+	
+	<!-- MONGO映射转换器，自动装配文件作为collection映射 -->
+	<mongo:mapping-converter base-package="com.bjj.modal"/>
+	
+	<!-- MONGO bean 仓库目录，自动装配扩展MongoRepository接口的接口 -->
+	<mongo:repositories base-package="com.bjj.service.db"></mongo:repositories>
+</beans>

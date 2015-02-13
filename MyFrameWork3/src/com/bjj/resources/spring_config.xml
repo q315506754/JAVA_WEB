@@ -13,4 +13,5 @@
    
    <!-- import others configuration files -->
    <import resource="spring_mvc.xml"/>
+   <import resource="spring_data.xml"/>
 </beans>

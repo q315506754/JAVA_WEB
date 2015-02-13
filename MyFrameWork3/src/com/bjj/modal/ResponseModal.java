@@ -2,7 +2,7 @@ package com.bjj.modal;
 
 public class ResponseModal {
 	private int error;
-	private String message;
+	private Object message;
 	
 	public int getError() {
 		return error;
@@ -10,10 +10,10 @@ public class ResponseModal {
 	public void setError(int error) {
 		this.error = error;
 	}
-	public String getMessage() {
+	public Object getMessage() {
 		return message;
 	}
-	public void setMessage(String message) {
+	public void setMessage(Object message) {
 		this.message = message;
 	}
 }
