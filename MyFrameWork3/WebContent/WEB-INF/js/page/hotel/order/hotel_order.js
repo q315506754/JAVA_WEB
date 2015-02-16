@@ -1,18 +1,18 @@
 $(function(){
 	function formatSelect2(e){
-		var d = $(e.element);
+//		var d = $(e.element);
 		return e.text;
 	};
 	
 	$("#city").select2({
 		placeholder:"请选择城市",
-		allowClear:true,
+//		allowClear:true,
 		formatSelection:formatSelect2
 	});
 	
 	$("#area").select2({
 		placeholder:"请选择区域",
-		allowClear:true,
+//		allowClear:true,
 		formatSelection:formatSelect2
 	});
 	

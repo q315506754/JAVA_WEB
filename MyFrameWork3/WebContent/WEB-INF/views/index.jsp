@@ -114,19 +114,17 @@
 		<!-- END NAVIGATION -->
 		
 		<!-- #MAIN PANEL -->
-		<div id="main" role="main">
+		<div id="main" role="main" style="background-size:100% 100%;background-image:url('img/background.jpg')">
 
 			<!-- #MAIN CONTENT -->
-			<div id="content">
-
+			<div>
+				<div id="content" style="opacity:0.9"></div>
 			</div>
 			
 			<!-- END #MAIN CONTENT -->
 
 		</div>
 		<!-- END #MAIN PANEL -->
-<%@include file="footer.jsp"%>
-
 	</body>
-
+<%@include file="footer.jsp"%>
 </html>

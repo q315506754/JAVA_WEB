@@ -24,7 +24,7 @@
 										<label class="label col col-2">省/市</label>
 										<div class="col col-3">
 											<select style="width:100%" class="select2" id="city">
-												<optgroup label="Alaskan/Hawaiian Time Zone">
+												<optgroup label="城市列表">
 													<option value="AK">Alaska</option>
 													<option value="HI">Hawaii</option>
 												</optgroup>
@@ -84,6 +84,18 @@
 						
 						<section>
 							<div class="row">
+								<label class="label col col-2">酒店名称</label>
+								<div class="col col-3">
+									<label class="input">
+										<input type="text" id="hotelName" class="input-sm" placeholder="请输入酒店名称"/>
+									</label>
+								</div>							
+							</div>
+
+						</section>
+						
+						<section>
+							<div class="row">
 								<div class="form-group">
 									<label class="label col col-2">间数</label>
 									<div class="col col-3">
@@ -120,4 +132,4 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript" src="js/page/hotel/order/hotel_order.js"></script>
+<script type="text/javascript" src="./js/page/hotel/order/hotel_order.js"></script>
