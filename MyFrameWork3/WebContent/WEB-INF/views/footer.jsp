@@ -45,8 +45,8 @@
 		<!-- JQUERY MASKED INPUT
 		<script src="./js/plugin/masked-input/jquery.maskedinput.min.js"></script> -->
 
-		<!-- JQUERY SELECT2 INPUT
-		<script src="./js/plugin/select2/select2.min.js"></script> -->
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="./js/plugin/select2/select2.min.js"></script>
 
 		<!-- JQUERY UI + Bootstrap Slider
 		<script src="./js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script> -->
@@ -71,3 +71,6 @@
 		<!-- SmartChat UI : plugin
 		<script src="./js/smart-chat-ui/smart.chat.ui.min.js"></script>
 		<script src="./js/smart-chat-ui/smart.chat.manager.min.js"></script> -->
+		
+		<!-- my tool js -->
+		<script src="./js/tools.js"></script>

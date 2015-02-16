@@ -12,8 +12,8 @@ function getCookie(name)
         return "";
 }
 
-//get ejs temp
-function getEjsTemplate(url,params,containerId){
+//get page
+function getTemplate(url,params,containerId){
     $.ajax({
         type: "get",
         url: url,
@@ -21,14 +21,10 @@ function getEjsTemplate(url,params,containerId){
 //        async:false,
         data:params
     }).done(function(data, textStatus){
-            if(data.error&&data.error==2){
-                $("#mLoginModal").modal();
-            }else{
-                $('#'+containerId).html(data);
-            }
-        }).fail(function(){
-            alert("网络异常，请重试！");
-        });
+        $('#'+containerId).html(data);
+    }).fail(function(){
+        alert("网络异常，请重试！");
+    });
 
 }
 

@@ -22,13 +22,13 @@
 				<!-- END LOGO PLACEHOLDER -->
 
 				<!-- Note: The activity badge color changes when clicked and resets the number to 0
-					 Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
-				<span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <!-- <b class="badge"> 21 </b> --> </span>
-
+					 Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications-->
+				 <!--<span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <b class="badge"> 21 </b> </span> -->
+				 
 				<!-- AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file -->
 				<div class="ajax-dropdown">
 
-					<!-- the ID links are fetched via AJAX to the ajax container "ajax-notifications" -->
+					<!-- the ID links are fetched via AJAX to the ajax container "ajax-notifications"
 					<div class="btn-group btn-group-justified" data-toggle="buttons">
 						<label class="btn btn-default">
 							<input type="radio" name="activity" id="ajax/notify/mail.html">
@@ -39,9 +39,9 @@
 						<label class="btn btn-default">
 							<input type="radio" name="activity" id="ajax/notify/tasks.html">
 							Tasks (4) </label>
-					</div>
+					</div> -->
 
-					<!-- notification content -->
+					<!-- notification content
 					<div class="ajax-notifications custom-scroll">
 
 						<div class="alert alert-transparent">
@@ -51,14 +51,14 @@
 
 						<i class="fa fa-lock fa-4x fa-border"></i>
 
-					</div>
+					</div> -->
 					<!-- end notification content -->
 
-					<!-- footer: refresh area -->
+					<!-- footer: refresh area
 					<span> Last updated on: 12/12/2013 9:43AM
 						<button type="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Loading..." class="btn btn-xs btn-default pull-right">
 							<i class="fa fa-refresh"></i>
-						</button> </span>
+						</button> </span> -->
 					<!-- end footer -->
 
 				</div>
@@ -68,10 +68,10 @@
 			<!-- #TOGGLE LAYOUT BUTTONS -->
 			<!-- pulled right: nav area -->
 			<div class="pull-right">
-				<!-- logout button -->
+				<!-- logout button
 				<div id="logout" class="btn-header transparent pull-right">
 					<span> <a href="login" title="系统信息" data-action="userLogout" data-logout-msg="是否真的退出系统？"><i class="fa fa-sign-out"></i></a> </span>
-				</div>
+				</div> -->
 				<!-- end logout button -->
 
 				<!-- search mobile button (this is hidden till mobile view port) -->
@@ -81,14 +81,14 @@
 				<!-- end search mobile button -->
 				
 				<!-- #SEARCH -->
-				<!-- input: search field -->
+				<!-- input: search field
 				<form action="#ajax/search.html" class="header-search pull-right">
 					<input id="search-fld" type="text" name="param" placeholder="Find reports and more">
 					<button type="submit">
 						<i class="fa fa-search"></i>
 					</button>
 					<a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
-				</form>
+				</form> -->
 				<!-- end input: search field -->
 
 				<!-- fullscreen button -->
@@ -110,33 +110,6 @@
 		
 		<!-- #MAIN PANEL -->
 		<div id="main" role="main">
-
-			<!-- RIBBON -->
-			<div id="ribbon">
-
-				<span class="ribbon-button-alignment"> 
-					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh" rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true" data-reset-msg="Would you like to RESET all your saved widgets and clear LocalStorage?"><i class="fa fa-refresh"></i></span> 
-				</span>
-
-				<!-- breadcrumb -->
-				<ol class="breadcrumb">
-					<!-- This is auto generated -->
-				</ol>
-				<!-- end breadcrumb -->
-
-				<!-- You can also add more buttons to the
-				ribbon for further usability
-
-				Example below:
-
-				<span class="ribbon-button-alignment pull-right" style="margin-right:25px">
-					<a href="#" id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa fa-grid"></i> Change Grid</a>
-					<span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa fa-plus"></i> Add</span>
-					<button id="search" class="btn btn-ribbon" data-title="search"><i class="fa fa-search"></i> <span class="hidden-mobile">Search</span></button>
-				</span> -->
-
-			</div>
-			<!-- END RIBBON -->
 
 			<!-- #MAIN CONTENT -->
 			<div id="content">
