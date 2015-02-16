@@ -68,16 +68,21 @@
 			<!-- #TOGGLE LAYOUT BUTTONS -->
 			<!-- pulled right: nav area -->
 			<div class="pull-right">
+				<!-- collapse menu button -->
+				<div id="hide-menu" class="btn-header pull-right">
+					<span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>
+				</div>
+				<!-- end collapse menu -->
 				<!-- logout button
 				<div id="logout" class="btn-header transparent pull-right">
 					<span> <a href="login" title="系统信息" data-action="userLogout" data-logout-msg="是否真的退出系统？"><i class="fa fa-sign-out"></i></a> </span>
 				</div> -->
 				<!-- end logout button -->
 
-				<!-- search mobile button (this is hidden till mobile view port) -->
+				<!-- search mobile button (this is hidden till mobile view port)
 				<div id="search-mobile" class="btn-header transparent pull-right">
 					<span> <a href="javascript:void(0)" title="Search"><i class="fa fa-search"></i></a> </span>
-				</div>
+				</div> -->
 				<!-- end search mobile button -->
 				
 				<!-- #SEARCH -->
