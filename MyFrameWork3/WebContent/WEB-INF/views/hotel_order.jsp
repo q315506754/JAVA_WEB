@@ -23,16 +23,9 @@
 								<div class="form-group">
 										<label class="label col col-2">省/市</label>
 										<div class="col col-3">
-											<select style="width:100%" class="select2" id="city">
-												<optgroup label="城市列表">
-													<option value="AK">Alaska</option>
-													<option value="HI">Hawaii</option>
-												</optgroup>
-												<optgroup label="Pacific Time Zone">
-													<option value="CA">California</option>
-													<option value="NV">Nevada</option>
-													<option value="OR">Oregon</option>
-													<option value="WA">Washington</option>
+											<select style="width:100%" class="select2" id="province" placeholder="请选择城市">
+												<optgroup label="省/市列表" id="cList">
+													<option value=''>请选择省市</option>
 												</optgroup>
 											</select>
 										</div>
@@ -42,15 +35,8 @@
 										<label class="label col col-2">区/县</label>
 										<div class="col col-3">
 											<select style="width:100%" class="select2" id="area">
-												<optgroup label="Alaskan/Hawaiian Time Zone">
-													<option value="AK">Alaska</option>
-													<option value="HI">Hawaii</option>
-												</optgroup>
-												<optgroup label="Pacific Time Zone">
-													<option value="CA">California</option>
-													<option value="NV">Nevada</option>
-													<option value="OR">Oregon</option>
-													<option value="WA">Washington</option>
+												<optgroup label="区/县列表" id="aList">
+													<option value=''>请选择区域</option>
 												</optgroup>
 											</select>
 										</div>
@@ -61,7 +47,7 @@
 						<section>
 							<div class="row">
 								<div class="form-group">
-										<label class="label col col-2">入住时间</label>
+										<label class="label col col-2">入住日期</label>
 										<div class="col col-3">
 											<div class="input-group">
 												<input type="text" id="stDate" placeholder="选择入住时间" class="form-control datepicker" data-dateformat="yy-mm-dd">
@@ -71,7 +57,7 @@
 								</div>
 							
 								<div class="form-group">
-										<label class="label col col-2">离店时间</label>
+										<label class="label col col-2">离店日期</label>
 										<div class="col col-3">
 											<div class="input-group">
 												<input type="text" id="edDate" placeholder="选择离店时间" class="form-control datepicker" data-dateformat="yy-mm-dd">

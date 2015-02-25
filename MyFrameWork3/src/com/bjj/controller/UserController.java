@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.bjj.modal.ResponseModal;
-import com.bjj.modal.User;
+import com.bjj.model.Response;
+import com.bjj.model.User;
 import com.bjj.service.UserService;
 
 @Controller
@@ -35,9 +35,9 @@ public class UserController {
 	 * */
 	@RequestMapping(value="/user/login",method=RequestMethod.POST)
 	@ResponseBody
-	public ResponseModal userLogin(@RequestBody User user){
+	public Response userLogin(@RequestBody User user){
 		System.out.println("userName is "+user.getUserName()+" password is "+user.getPassWord());
-		ResponseModal res = new ResponseModal();
+		Response res = new Response();
 		res.setError(0);
 		user = service.doLogin(user.getUserName(), user.getPassWord());
 		System.out.println("==================="+(null!=user?user.getId():"null"));
@@ -50,8 +50,8 @@ public class UserController {
 	 * */
 	@RequestMapping(value="/user/list",method=RequestMethod.GET)
 	@ResponseBody
-	public ResponseModal getUserList(){
-		ResponseModal res = new ResponseModal();
+	public Response getUserList(){
+		Response res = new Response();
 		res.setError(0);
 		res.setMessage(service.getAllUsers());
 		return res;
@@ -62,8 +62,8 @@ public class UserController {
 	 * */
 	@RequestMapping(value="/user/{userName}/mobile",method=RequestMethod.GET)
 	@ResponseBody
-	public ResponseModal getUserMobile(@PathVariable String userName){
-		ResponseModal res = new ResponseModal();
+	public Response getUserMobile(@PathVariable String userName){
+		Response res = new Response();
 		res.setError(0);
 		res.setMessage(service.getUserMobile(userName));
 		return res;

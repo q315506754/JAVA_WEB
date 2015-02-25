@@ -1,4 +1,4 @@
-package com.bjj.modal;
+package com.bjj.model;
 
 import java.io.Serializable;
 

@@ -1,4 +1,5 @@
-
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!-- #CSS Links -->
 <!-- Basic Styles -->
 <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css">

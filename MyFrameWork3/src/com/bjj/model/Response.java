@@ -1,8 +1,13 @@
-package com.bjj.modal;
+package com.bjj.model;
 
-public class ResponseModal {
-	private int error;
+public class Response {
+	private int error; //0 没有错误 1 有错误
 	private Object message;
+	
+	public Response(){
+		this.error = 0;
+		this.message = "success";
+	}
 	
 	public int getError() {
 		return error;
