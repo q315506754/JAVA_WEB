@@ -24,6 +24,8 @@ public class AreaController {
 			rm.setMessage(ser.getAllAreas(cityId));
 		} catch (Exception e) {
 			e.printStackTrace();
+			rm.setError(1);
+			rm.setMessage("获取区域列表异常:"+e.getMessage());
 		}
 		return rm;
 	}

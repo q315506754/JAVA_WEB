@@ -6,7 +6,7 @@ public class Response {
 	
 	public Response(){
 		this.error = 0;
-		this.message = "success";
+		this.message = null;
 	}
 	
 	public int getError() {

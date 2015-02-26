@@ -23,6 +23,8 @@ public class CityController {
 			rm.setMessage(ser.getAllCitys());
 		} catch (Exception e) {
 			e.printStackTrace();
+			rm.setError(1);
+			rm.setMessage("获取城市列表异常:"+e.getMessage());
 		}
 		return rm;
 	}

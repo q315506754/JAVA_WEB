@@ -54,9 +54,11 @@ $(function(){
 			if(data.error == 0){
 				$("#mod_loading").hide();
 				var html = "<option value=''>请选择区域</option>";
-				for(var i=0;i<data.message.length;i++){
-					var a = data.message[i];
-					html += "<option value='"+a.id+"'>"+a.name+"</option>";
+				if(null!=data.message){
+					for(var i=0;i<data.message.length;i++){
+						var a = data.message[i];
+						html += "<option value='"+a.id+"'>"+a.name+"</option>";
+					}
 				}
 				$("#aList").html(html);
 			}
