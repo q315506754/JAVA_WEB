@@ -5,19 +5,17 @@ import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection="city")
-public class City {
+@Document(collection="hotel")
+public class Hotel {
 	@Id
 	private String id;
 	@Field("name")
 	private String text;
-	private String provinceId;
 	
 	@PersistenceConstructor
-	public City(String id,String text,String provinceId){
+	public Hotel(String id,String text){
 		this.id = id;
 		this.text = text;
-		this.provinceId = provinceId;
 	}
 
 	public String getId() {
@@ -34,13 +32,5 @@ public class City {
 
 	public void setText(String text) {
 		this.text = text;
-	}
-
-	public String getProvinceId() {
-		return provinceId;
-	}
-
-	public void setProvinceId(String provinceId) {
-		this.provinceId = provinceId;
 	}
 }

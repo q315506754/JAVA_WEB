@@ -21,8 +21,8 @@
 		<!-- IMPORTANT: APP CONFIG -->
 		<script src="./js/app.config.js"></script>
 
-		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events
-		<script src="./js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events -->
+		<script src="./js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
 
 		<!-- BOOTSTRAP JS -->
 		<script src="./js/bootstrap/bootstrap.min.js"></script>

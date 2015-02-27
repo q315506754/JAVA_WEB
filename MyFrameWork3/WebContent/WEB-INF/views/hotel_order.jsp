@@ -23,11 +23,7 @@
 								<div class="form-group">
 										<label class="label col col-2">省/市</label>
 										<div class="col col-3">
-											<select style="width:100%" class="select2" id="province" placeholder="请选择城市">
-												<optgroup label="省/市列表" id="cList">
-													<option value=''>请选择省市</option>
-												</optgroup>
-											</select>
+											<input type="hidden" id="province" style="width:100%"/>
 										</div>
 								</div>
 							
@@ -70,12 +66,12 @@
 						
 						<section>
 							<div class="row">
-								<label class="label col col-2">酒店名称</label>
-								<div class="col col-3">
-									<label class="input">
-										<input type="text" id="hotelName" class="input-sm" placeholder="请输入酒店名称"/>
-									</label>
-								</div>							
+								<div class="form-group">
+									<label class="label col col-2">酒店名称</label>
+									<div class="col col-3">
+										<input type="hidden" id="hotelName" style="width:100%"/>
+									</div>
+								</div>					
 							</div>
 
 						</section>
@@ -103,9 +99,9 @@
 									<label class="label col col-2">房型</label>
 									<div class="col col-3">
 										<label class="select"><select style="width:100%" id="roomType">
-												<option value="b">大床</option>
-												<option value="d">双床</option>
-												<option value="a">皆可</option>
+												<option value=1>大床</option>
+												<option value=2>双床</option>
+												<option value=0>皆可</option>
 										</select><i></i></label>
 									</div>
 								</div>

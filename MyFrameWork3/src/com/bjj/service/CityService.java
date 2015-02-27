@@ -16,4 +16,8 @@ public class CityService {
 	public List<City> getAllCitys(){
 		return repo.findAll();
 	}
+	
+	public List<City> getCitysLikeName(String name){
+		return repo.findCitysLikeName(name);
+	}
 }

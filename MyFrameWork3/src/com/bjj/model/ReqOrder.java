@@ -113,4 +113,20 @@ public class ReqOrder implements Serializable {
 				"area="+this.area+"startDate="+this.startDate+"endDate="+this.endDate+
 				"hotelName="+this.hotelName+"roomNumber="+this.roomNumber+"roomType="+this.roomType+"]";
 	}
+	
+	public static String RoomTypeFormat(int type){
+		String ft = null;
+		switch(type){
+		case 0:
+			ft = "皆可";
+			break;
+		case 1:
+			ft = "大床";
+			break;
+		case 2:
+			ft = "双床";
+			break;
+		}
+		return ft;
+	}
 }
